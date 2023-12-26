@@ -1,5 +1,5 @@
 import * as React from "react";
-import { styled, useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -66,7 +66,6 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function SideNav() {
-  const theme = useTheme();
   const [open, setOpen] = React.useState(true);
   const navigate = useNavigate();
 
@@ -76,10 +75,10 @@ export default function SideNav() {
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={() => setOpen(!open)}>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
+            {open ? (
               <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
             )}
           </IconButton>
         </DrawerHeader>
