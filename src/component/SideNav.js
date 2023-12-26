@@ -12,8 +12,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { useNavigate } from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 
 const drawerWidth = 240;
 
@@ -104,7 +106,7 @@ export default function SideNav() {
                   justifyContent: "center",
                 }}
               >
-                <InboxIcon />
+                <HomeIcon />
               </ListItemIcon>
               <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
@@ -130,7 +132,7 @@ export default function SideNav() {
                   justifyContent: "center",
                 }}
               >
-                <InboxIcon />
+                <InfoIcon />
               </ListItemIcon>
               <ListItemText primary="About Us" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
@@ -156,7 +158,7 @@ export default function SideNav() {
                   justifyContent: "center",
                 }}
               >
-                <InboxIcon />
+                <ContactPageIcon />
               </ListItemIcon>
               <ListItemText
                 primary="Contact Us"
